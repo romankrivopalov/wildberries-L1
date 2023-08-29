@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .item {
+      padding: 24px 32px;
+      max-width: 200px;
+      font-family: Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      border-radius: 16px;
+    }
+
+    .item:nth-child(1) {
+      background-color: lightpink;
+    }
+
+    .item:nth-child(2) {
+      background-color: skyblue;
+    }
+
+    .item:nth-child(3) {
+      background-color: thistle;
+    }
+  </style>
+</head>
+<body>
+  <ul id="list">
+
+  </ul>
+</body>
+
+  <template id="template">
+    <li class="item">
+      <div class="item__content"></div>
+    </li>
+  </template>
+
+  <script src="./28.js"></script>
+</html>
