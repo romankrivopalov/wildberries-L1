@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      font-family: Helvetica, sans-serif;
+      background-color: #242525
+    }
+
+    #form {
+      margin: 0;
+      padding: 96px 64px 64px;
+      max-width: 450px;
+      background-color: #2550a5;
+      border-radius: 16px;
+      background-image: none;
+      background-size: cover;
+    }
+
+    .label {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+      line-height: 36px;
+      color: #FFF;
+    }
+
+    .input {
+      margin: 8px 0 0;
+      padding: 16px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      background-color: rgba(255, 255, 255, .5);
+      border: none;
+      border-radius: 6px;
+      transition: background-color, .2s;
+    }
+
+    .input:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    .btn {
+      margin: 24px 0 0;
+      padding: 16px 24px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 24px;
+      background-color: #95355d;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color, .2s;
+    }
+
+    .btn:hover {
+      background-color: #7d294c;
+    }
+
+    .btn:disabled {
+      opacity: .3;
+    }
+  </style>
+</head>
+<body>
+  <form id="form">
+    <label class="label">
+      Как позвать капибару?
+      <input class="input" type="text" minlength="2" required>
+      <button class="btn" type="submit" disabled="true">Попробовать</button>
+    </label>
+  </form>
+</body>
+<script src="./29.js"></script>
+</html>
