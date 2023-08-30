@@ -42,3 +42,11 @@ const sortArrayByAge = (arr) => {
 }
 
 console.log(sortArrayByAge(ArrayExample));
+// { name: 'Alex', age: 19 },
+// { name: 'Alex', age: 19 },
+// { name: 'Brian', age: 19 },
+// { name: 'Ethan', age: 19 },
+// { name: 'Sara', age: 19 },
+// { name: 'John', age: 25 },
+// { name: 'Eva', age: 27 },
+// { name: 'Derek', age: 41 }
