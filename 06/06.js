@@ -1,4 +1,4 @@
-const ArrayExample = [
+const arrayExample = [
   { name: 'John', age: 25, },
   { name: 'Brian', age: 19, },
   { name: 'Eva', age: 27, },
@@ -41,7 +41,7 @@ const sortArrayByAge = (arr) => {
   return arrayByName; // массив возвращать необязательно, тк массив мутирует
 }
 
-console.log(sortArrayByAge(ArrayExample));
+console.log(sortArrayByAge(arrayExample));
 // { name: 'Alex', age: 19 },
 // { name: 'Alex', age: 19 },
 // { name: 'Brian', age: 19 },
