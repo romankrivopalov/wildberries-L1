@@ -22,7 +22,6 @@ const generateText = () => {
 
 // async/await специальный синтаксис для работы с промисами
 // async всегда возвращает промис
-//
 const getText = async () => {
   // await остановит интерпритатор javaScript до момента выполнения промиса справа
   const text = await generateText();
