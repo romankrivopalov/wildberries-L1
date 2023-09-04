@@ -72,7 +72,7 @@
 
 > :white_square_button: Задание №20. Реализовать функцию подсчета объема памяти занимаемого данными в LocalStorage для предыдущей задачи. При изменении данных в localStorage в консоль должен выводиться объем занятой памяти / максимальный размер хранилища.
 
-> :white_square_button: Задание №21. Вычислить размер коллстэка в основных браузерах: Chrome, Firefox, Opera и Safari (если есть возможность).
+> :white_check_mark: [Задание №21](https://github.com/romankrivopalov/wildberries-L1/tree/main/21). Вычислить размер коллстэка в основных браузерах: Chrome, Firefox, Opera и Safari (если есть возможность).
 
 > :white_square_button: Задание №22. Посчитайте сколько раз можно вызвать функцию `document.write()` внутри `document.write()`. Объясните результат.
 
