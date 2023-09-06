@@ -4,12 +4,12 @@ class Section {
     this._renderer = renderer;
   }
 
-  // очищаем контейнер
+  // очистка контейнер
   removeItems = () => {
     this._container.innerHTML = '';
   }
 
-  // добавлям новый элеменет
+  // добавление нового элемента
   setItem = (element) => {
     this._container.prepend(this._renderer(element));
   }

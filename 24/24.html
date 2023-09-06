@@ -12,7 +12,6 @@
     }
 
     .table {
-
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -119,6 +118,36 @@
     .item__content:last-child {
       border-right: none;
     }
+
+    .pagination {
+      align-self: flex-end;
+      display: flex;
+      margin: 24px 0 0 0;
+      padding: 0;
+    }
+
+    .pagination__item {
+      box-sizing: border-box;
+      display: block;
+      margin: 0;
+      padding: 0 8px;
+      width: 32px;
+      font-size: 14px;
+      line-height: 32px;
+      color: rgba(255, 255, 255, .5);
+      background-color: darkslateblue;
+      transition: color, .1s ease-in;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .pagination__item_active {
+      color: rgb(255, 255, 255);
+    }
+
+    .pagination__item:hover {
+      color: rgb(255, 255, 255);
+    }
   </style>
   <script type="module" src="./24.js"></script>
 </head>
@@ -156,10 +185,12 @@
     </div>
 
     <ul class="table__body" id="list">
-
+      <!-- контейнер для элементов таблицы -->
     </ul>
 
-    <div class="pagination"></div>
+    <div class="pagination" id="pagination">
+      <!-- контейнер для элементов пагинации -->
+    </div>
   </div>
     <template id="template">
       <li class="item">

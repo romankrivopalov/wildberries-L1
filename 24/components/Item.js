@@ -6,9 +6,9 @@ class Item {
 
   _getTemplate = () => {
     const item = document
-      .querySelector('#template')
+      .querySelector(this._itemSetting.templateSelector)
       .content
-      .querySelector('.item')
+      .querySelector(this._itemSetting.itemSelector)
       .cloneNode(true);
 
     return item;
@@ -16,13 +16,13 @@ class Item {
 
   generateItem = () => {
     this._item = this._getTemplate();
-    this._item.querySelector('.item__content[data-type="fname"]').textContent = this._data.fname;
-    this._item.querySelector('.item__content[data-type="lname"]').textContent = this._data.lname;
-    this._item.querySelector('.item__content[data-type="tel"]').textContent = this._data.tel;
-    this._item.querySelector('.item__content[data-type="address"]').textContent = this._data.address;
-    this._item.querySelector('.item__content[data-type="city"]').textContent = this._data.city;
-    this._item.querySelector('.item__content[data-type="state"]').textContent = this._data.state;
-    this._item.querySelector('.item__content[data-type="zip"]').textContent = this._data.zip;
+    this._item.querySelector(this._itemSetting.itemFNameSelector).textContent = this._data.fname;
+    this._item.querySelector(this._itemSetting.itemLNameSelector).textContent = this._data.lname;
+    this._item.querySelector(this._itemSetting.itemTelSelector).textContent = this._data.tel;
+    this._item.querySelector(this._itemSetting.itemAddrSelector).textContent = this._data.address;
+    this._item.querySelector(this._itemSetting.itemCitySelector).textContent = this._data.city;
+    this._item.querySelector(this._itemSetting.itemStateSelector).textContent = this._data.state;
+    this._item.querySelector(this._itemSetting.itemZipSelector).textContent = this._data.zip;
 
     return this._item;
   }

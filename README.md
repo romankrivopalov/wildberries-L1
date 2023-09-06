@@ -78,7 +78,7 @@
 
 > :white_square_button: Задание №23. Анализатор сложности пароля: создайте функцию, которая оценивает сложность введенного пользователем пароля. Необходимо анализировать длину пароля, использование различных символов, наличие чисел и букв в разных регистрах. Выведите пользователю оценку сложности пароля и предложите улучшения, если пароль слишком слабый.
 
-> :white_square_button: Задание №24. Разработайте страницу, отображающую таблицу с данными. Данные необходимо подгружать из этого [источника](http://www.filltext.com/?rows=1000&fname=%7BfirstName%7D&lname=%7BlastName%7D&tel=%7Bphone%7Cformat%7D&address=%7BstreetAddress%7D&city=%7Bcity%7D&state=%7BusState%7Cabbr%7D&zip=%7Bzip%7D&pretty=true).
+> :white_check_mark: [Задание №24](https://github.com/romankrivopalov/wildberries-L1/tree/main/24). Разработайте страницу, отображающую таблицу с данными. Данные необходимо подгружать из этого [источника](http://www.filltext.com/?rows=1000&fname=%7BfirstName%7D&lname=%7BlastName%7D&tel=%7Bphone%7Cformat%7D&address=%7BstreetAddress%7D&city=%7Bcity%7D&state=%7BusState%7Cabbr%7D&zip=%7Bzip%7D&pretty=true).
 
 >  >  ##### Требования:
 >  >  * данные должны загружаться при загрузке страницы

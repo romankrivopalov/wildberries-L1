@@ -16,70 +16,55 @@ import Item from './components/Item.js';
 
 const tableSetting = {
   itemSelector: '#header-item',
+  elementsPerPage: 50, // количество элементов на странице
+  itemHeaderActiveClass: 'header__item_active',
+  itemReverseClass: 'reverse',
+}
+const itemSetting = {
+  templateSelector: '#template',
+  itemSelector: '.item',
+  itemFNameSelector: '.item__content[data-type="fname"]',
+  itemLNameSelector: '.item__content[data-type="lname"]',
+  itemTelSelector: '.item__content[data-type="tel"]',
+  itemAddrSelector: '.item__content[data-type="address"]',
+  itemCitySelector: '.item__content[data-type="city"]',
+  itemStateSelector: '.item__content[data-type="state"]',
+  itemZipSelector: '.item__content[data-type="zip"]',
 }
 
-const api = new Api();
-const itemList = new Section(
-  '#list',
-  (data) => {
-    const item = new Item(data);
-    return item.generateItem();
-  }
-)
-const table = new Table(tableSetting, itemList.setItem, itemList.removeItems);
+// создание инстансов
+  const api = new Api();
 
+  const itemList = new Section(
+    '#list', // селектор контейнера, для элементов таблицы
+    (data) => { // инструкция
+      const item = new Item(data, itemSetting);
+      return item.generateItem();
+    }
+  );
 
+  const paginationList = new Section(
+    '#pagination', // селектор контейнера, для элементов пагинации
+    (data) => { // инструкция
+      const item = document.createElement('span');
+      item.textContent = data;
+      item.classList.add('pagination__item');
+
+      return item;
+    }
+  );
+
+  const table = new Table(
+    tableSetting,
+    itemList.setItem, // добавление элемента таблицы
+    itemList.removeItems, // удаление элемента таблицы
+    paginationList.setItem, // добавление элемента пагинации
+    paginationList.removeItems, // удаление элемента пагинации
+  );
+
+// метод с fetch запросом на получение данных
 api.getData()
-  .then(res => table.setItems(res))
+  .then(res => table.getPagination(res, 1))
 
-// table.setItems([
-//   {
-//     "fname": "Joseph",
-//     "lname": "Gleason",
-//     "tel": "(763)957-0890",
-//     "address": "603 Ac Ct",
-//     "city": "Eastvale",
-//     "state": "C",
-//     "zip": 37397
-//   },
-//   {
-//     "fname": "Aatikorn",
-//     "lname": "Gilby",
-//     "tel": "(742)674-1389",
-//     "address": "401 Sed Ct",
-//     "city": "Nashville",
-//     "state": "A",
-//     "zip": 87241
-//   },
-//   {
-//     "fname": "Haile",
-//     "lname": "Hammant",
-//     "tel": "(273)378-4421",
-//     "address": "9437 Neque Rd",
-//     "city": "Cheektowaga",
-//     "state": "F",
-//     "zip": 41077
-//   },
-//   {
-//     "fname": "Bayle",
-//     "lname": "Aorth",
-//     "tel": "(764)758-4969",
-//     "address": "9791 Sapien Ave",
-//     "city": "Palm Beach Gardens",
-//     "state": "B",
-//     "zip": 85351
-//   },
-//   {
-//     "fname": "Mark",
-//     "lname": "Rainwater",
-//     "tel": "(916)901-0654",
-//     "address": "170 Lorem Ave",
-//     "city": "Pensacola",
-//     "state": "D",
-//     "zip": 26469
-//   },
-// ])
-
+// установка слушателей таблицы
 table.setEventListeners();
-
-
