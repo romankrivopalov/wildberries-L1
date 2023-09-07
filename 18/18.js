@@ -1,3 +1,7 @@
+// Подсчитать максимальный объем данных, который можно записать в `localStorage` вашего браузера.
+
+// ==================================================
+
 const btnAdd = document.querySelector('#add');
 const countSize = document.querySelector('#size');
 
